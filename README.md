@@ -40,3 +40,8 @@ All 247 previously published IDs and images remain unchanged in this 333-stage s
 ## New puzzle notifications
 
 The publication workflow `.github/workflows/notify-content.yml` requests a release check after a v4 manifest update. Set Actions variable `PUSH_API_URL` and Actions secret `PUSH_ADMIN_TOKEN` after deploying the private application repository's push server. It starts disabled while those settings are absent. The server verifies packs, announces genuinely new challenge lineages, and suppresses art editions and repeated publication events. Device tokens and installation secrets stay in the private delivery database and never enter this public repository.
+
+
+## Organization ownership
+
+This public content repository is maintained at [HoneyBadgerians/lumenveil-content](https://github.com/HoneyBadgerians/lumenveil-content). The application source remains in the separate private `HoneyBadgerians/lumenveil` repository. Published pack bytes and SHA-256 checksums are unchanged by the transfer; manifest pack URLs now use the organization owner.
