@@ -35,3 +35,8 @@ Clients 0.12+ use `v4/manifest.json` and `v4/packs/catalog-2.3.0.json` (schema 2
 The original 120 active slots now contain 195 zero row/column clues instead of 268. Each axis has at most 20% empty lines. Every active puzzle solves by line deduction in at least three rounds. Normal selection still has 126 challenges in 17 rooms, including 43 at 30×30.
 
 All 247 previously published IDs and images remain unchanged in this 333-stage snapshot. Clients follow `replaces` chains so saves and collection entries from either earlier edition remain accessible. Root, v2 and v3 feeds are intentionally unchanged for earlier clients.
+
+
+## New puzzle notifications
+
+The publication workflow `.github/workflows/notify-content.yml` requests a release check after a v4 manifest update. Set Actions variable `PUSH_API_URL` and Actions secret `PUSH_ADMIN_TOKEN` after deploying the private application repository's push server. It starts disabled while those settings are absent. The server verifies packs, announces genuinely new challenge lineages, and suppresses art editions and repeated publication events. Device tokens and installation secrets stay in the private delivery database and never enter this public repository.

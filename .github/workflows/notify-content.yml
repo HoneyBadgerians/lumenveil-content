@@ -1,0 +1,26 @@
+name: Notify new puzzle releases
+on:
+  push:
+    paths: ['v4/manifest.json']
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: content-notifications
+  cancel-in-progress: false
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    env:
+      PUSH_API_URL: ${{ vars.PUSH_API_URL }}
+      PUSH_ADMIN_TOKEN: ${{ secrets.PUSH_ADMIN_TOKEN }}
+    steps:
+      - name: Request release check
+        if: env.PUSH_API_URL != '' && env.PUSH_ADMIN_TOKEN != ''
+        run: |
+          curl --fail-with-body --retry 3 --connect-timeout 15 --max-time 60 \
+            --request POST "${PUSH_API_URL%/}/refresh" \
+            --header "Authorization: Bearer ${PUSH_ADMIN_TOKEN}"
+      - name: Report missing setup
+        if: env.PUSH_API_URL == '' || env.PUSH_ADMIN_TOKEN == ''
+        run: echo '::notice::Push delivery is not configured yet. No notification was sent.'
