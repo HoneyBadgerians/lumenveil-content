@@ -16,3 +16,7 @@ The private app repository includes export and validation scripts. All stages in
 `v2/manifest.json` points to `v2/packs/catalog-2.0.0.json`. This feed adds 30×30 art and the Master tier, with 120 regular challenges in 16 rooms, including 43 new 30×30 puzzles. The snapshot also preserves 43 old quick records marked `practice` for existing saves. All 163 records pass logical deduction checks; regular challenges require at least three deduction rounds and a grid of at least 10×10.
 
 Keep the original root schema-1 manifest and packs unchanged for older apps. Publish future schema-2 snapshots under `v2/packs/`, increment the v2 revision, and update only the v2 manifest. The private application adds card animations and an interactive tutorial; these features require an app update.
+
+## Revision 2 / catalog 2.1.0
+
+The v2 manifest now points to `v2/packs/catalog-2.1.0.json`: 126 playable challenges in 17 rooms, plus the unchanged 43 practice records (169 total). Six new 20×20 records in The Wandering Room use clearly asymmetric original compositions and solve by line deduction in at least three rounds. All previous stage IDs and artwork are unchanged. Older snapshot filenames remain immutable.
