@@ -20,3 +20,9 @@ Keep the original root schema-1 manifest and packs unchanged for older apps. Pub
 ## Revision 2 / catalog 2.1.0
 
 The v2 manifest now points to `v2/packs/catalog-2.1.0.json`: 126 playable challenges in 17 rooms, plus the unchanged 43 practice records (169 total). Six new 20×20 records in The Wandering Room use clearly asymmetric original compositions and solve by line deduction in at least three rounds. All previous stage IDs and artwork are unchanged. Older snapshot filenames remain immutable.
+
+## Edition-aware feed: v3 / catalog 2.2.0
+
+New clients (0.11+) use `v3/manifest.json` and `v3/packs/catalog-2.2.0.json`. The JSON data schema is still 2. This revision replaces 78 nearly symmetric challenge compositions with independently deducible asymmetric editions, retaining 42 existing asymmetric compositions and the six Wandering Room records. Normal play remains 126 challenges.
+
+New IDs link back with `replaces`. Every prior ID and its art remains byte-for-byte unchanged in the 247-record snapshot. A 0.11+ client can resume saved older editions from In progress and Collection. Keep root and v2 manifests unchanged for older clients whose UI does not support earlier-edition browsing.
