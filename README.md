@@ -23,6 +23,15 @@ The v2 manifest now points to `v2/packs/catalog-2.1.0.json`: 126 playable challe
 
 ## Edition-aware feed: v3 / catalog 2.2.0
 
-New clients (0.11+) use `v3/manifest.json` and `v3/packs/catalog-2.2.0.json`. The JSON data schema is still 2. This revision replaces 78 nearly symmetric challenge compositions with independently deducible asymmetric editions, retaining 42 existing asymmetric compositions and the six Wandering Room records. Normal play remains 126 challenges.
+Clients 0.11.x use `v3/manifest.json` and `v3/packs/catalog-2.2.0.json`. The JSON data schema is still 2. This revision replaces 78 nearly symmetric challenge compositions with independently deducible asymmetric editions, retaining 42 existing asymmetric compositions and the six Wandering Room records. Normal play remains 126 challenges.
 
-New IDs link back with `replaces`. Every prior ID and its art remains byte-for-byte unchanged in the 247-record snapshot. A 0.11+ client can resume saved older editions from In progress and Collection. Keep root and v2 manifests unchanged for older clients whose UI does not support earlier-edition browsing.
+New IDs link back with `replaces`. Every prior ID and its art remains byte-for-byte unchanged in the 247-record snapshot. A 0.11 client can resume saved older editions from In progress and Collection. Keep root and v2 manifests unchanged for older clients whose UI does not support earlier-edition browsing.
+
+
+## Natural compositions: v4 / catalog 2.3.0
+
+Clients 0.12+ use `v4/manifest.json` and `v4/packs/catalog-2.3.0.json` (schema 2, revision 4). All original 120 slots were reviewed for readability. 86 current slots receive a new immutable edition: excessive rotations/shears are replaced with upright original silhouettes, recognizable side views and small subject-specific details. No minimum asymmetry score applies; symmetry is allowed when it suits the subject.
+
+The original 120 active slots now contain 195 zero row/column clues instead of 268. Each axis has at most 20% empty lines. Every active puzzle solves by line deduction in at least three rounds. Normal selection still has 126 challenges in 17 rooms, including 43 at 30×30.
+
+All 247 previously published IDs and images remain unchanged in this 333-stage snapshot. Clients follow `replaces` chains so saves and collection entries from either earlier edition remain accessible. Root, v2 and v3 feeds are intentionally unchanged for earlier clients.
