@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "revision": 4,
-  "version": "2.3.0",
-  "packUrl": "https://raw.githubusercontent.com/HoneyBadgerians/lumenveil-content/main/v4/packs/catalog-2.3.0.json",
-  "sha256": "0d0ef3fd86f124ef8ee9e5584f926e13daff5d0e38c5947a54c616570e265f07"
+  "revision": 5,
+  "version": "2.4.0",
+  "packUrl": "https://raw.githubusercontent.com/HoneyBadgerians/lumenveil-content/main/v4/packs/catalog-2.4.0.json",
+  "sha256": "74668d87af7d291e7a3ca11be50ada97322274b3330716c4770c5c29c4dc4b55"
 }

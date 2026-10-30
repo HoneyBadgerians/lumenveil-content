@@ -45,3 +45,7 @@ The publication workflow `.github/workflows/notify-content.yml` requests a relea
 ## Organization ownership
 
 This public content repository is maintained at [HoneyBadgerians/lumenveil-content](https://github.com/HoneyBadgerians/lumenveil-content). The application source remains in the separate private `HoneyBadgerians/lumenveil` repository. Published pack bytes and SHA-256 checksums are unchanged by the transfer; manifest pack URLs now use the organization owner.
+
+## Interior detail editions: catalog 2.4.0 / revision 5
+
+The v4 feed now points to the immutable `v4/packs/catalog-2.4.0.json`. Forty-two Master boards add interior space without changing their original silhouette boundary pixels. Clues of length 18+ decrease from 438 to 146. Every changed puzzle has a new ID and `replaces` link, solves without guessing, and retains its prior edition for saved progress. There are still 126 active challenges in 17 rooms (43 at 30×30), with 375 total IDs. All 333 prior IDs and artwork are preserved; earlier packs and older feeds are unchanged.
